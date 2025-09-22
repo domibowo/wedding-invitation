@@ -1,26 +1,58 @@
-import React from 'react';
-import logo from './logo.svg';
 import './App.css';
+import { StepIndicator } from './components/StepIndicator';
+import { TemplateGallery } from './components/stepper/TemplateGallery';
+import { InvitationProvider, useInvitation } from './contexts/InvitationContext';
 
-function App() {
+function AppContent() {
+    const { currentStep } = useInvitation();
+
+  const renderCurrentStep = () => {
+    switch (currentStep) {
+      case 0:
+        return <TemplateGallery />;
+      // case 1:
+      //   return <TextEditor />;
+      // case 2:
+      //   return <PhotoEditor />;
+      // case 3:
+      //   return <ExtrasEditor />;
+      // case 4:
+      //   return <InvitationPreview />;
+      default:
+        return <TemplateGallery />;
+    }
+  };
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+    <div className="min-h-screen bg-gray-50">
+      <header className="bg-white shadow-sm">
+        <div className="max-w-6xl mx-auto px-6 py-4">
+          <h1 className="text-2xl font-serif text-center text-primary">
+            Wedding Invitation Builder
+          </h1>
+          <p className="text-center text-muted-foreground mt-1">
+            Create beautiful digital wedding invitations in minutes
+          </p>
+        </div>
       </header>
+      <StepIndicator />
+      <main className="pb-8">
+        {renderCurrentStep()}
+      </main>
+
+      <footer className="bg-white border-t py-6">
+        <div className="max-w-6xl mx-auto px-6 text-center text-sm text-muted-foreground">
+          <p>© 2024 Wedding Invitation Builder. Create memories that last forever.</p>
+        </div>
+      </footer>
     </div>
   );
 }
 
-export default App;
+export default function App() {
+  return (
+    <InvitationProvider>
+      <AppContent />
+    </InvitationProvider>
+  )
+}
