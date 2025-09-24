@@ -103,9 +103,9 @@ export function TemplateGallery() {
                   <div className="absolute inset-0 bg-black/20 opacity-0 hover:opacity-100 transition-opacity flex items-center justify-center">
                     <Button
                       onClick={() => handleSelectTemplate(template)}
-                      className="bg-white text-black hover:bg-gray-100"
+                      className="bg-white text-black hover:bg-gray-100 p-2 rounded-md"
                     >
-                      Select Template
+                      <span className='font-semibold'>Select Template</span>
                     </Button>
                   </div>
                 </div>

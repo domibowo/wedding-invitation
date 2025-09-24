@@ -1,6 +1,7 @@
 import './App.css';
 import { StepIndicator } from './components/StepIndicator';
 import { TemplateGallery } from './components/stepper/TemplateGallery';
+import { TextEditor } from './components/stepper/TextEditor';
 import { InvitationProvider, useInvitation } from './contexts/InvitationContext';
 
 function AppContent() {
@@ -10,8 +11,8 @@ function AppContent() {
     switch (currentStep) {
       case 0:
         return <TemplateGallery />;
-      // case 1:
-      //   return <TextEditor />;
+      case 1:
+        return <TextEditor />;
       // case 2:
       //   return <PhotoEditor />;
       // case 3:
