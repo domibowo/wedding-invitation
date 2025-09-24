@@ -7,7 +7,7 @@ type Size = "sm" | "lg" | "default";
 interface Props extends React.ComponentProps<typeof ReactstrapButton> {
   variant?: Variant;
   size?: Size;
-  asChild?: boolean; // keep API similar if needed
+  asChild?: boolean;
 }
 
 function Button({

@@ -1,8 +1,10 @@
 import React from 'react';
 import { useInvitation } from '../../contexts/InvitationContext';
-import { Card, CardContent } from '../common/cards';
-import { CardHeader, CardTitle, Input, Label } from 'reactstrap';
+import { Card, CardContent, CardHeader, CardTitle } from '../common/cards';
+import { Label } from 'reactstrap';
 import { Button } from '../common/button';
+import { Input } from '../common/input';
+import { Textarea } from '../common/textarea';
 
 
 export function TextEditor() {
@@ -104,7 +106,7 @@ export function TextEditor() {
                 </div>
                 <div>
                   <Label htmlFor="venue-address">Venue Address</Label>
-                  <textarea
+                  <Textarea
                     id="venue-address"
                     value={invitationData.venue.address}
                     onChange={(e) => handleVenueChange('address', e.target.value)}

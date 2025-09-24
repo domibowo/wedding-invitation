@@ -1336,7 +1336,7 @@
   }
 
   .resize-none {
-    resize: none;
+    resize: both;
   }
 
   .scroll-my-1 {

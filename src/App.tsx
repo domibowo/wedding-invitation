@@ -1,3 +1,4 @@
+import { Theme } from '@radix-ui/themes';
 import './App.css';
 import { StepIndicator } from './components/StepIndicator';
 import { TemplateGallery } from './components/stepper/TemplateGallery';
@@ -25,28 +26,30 @@ function AppContent() {
   };
 
   return (
-    <div className="min-h-screen bg-gray-50">
-      <header className="bg-white shadow-sm">
-        <div className="max-w-6xl mx-auto px-6 py-4">
-          <h1 className="text-2xl font-serif text-center text-primary">
-            Wedding Invitation Builder
-          </h1>
-          <p className="text-center text-muted-foreground mt-1">
-            Create beautiful digital wedding invitations in minutes
-          </p>
-        </div>
-      </header>
-      <StepIndicator />
-      <main className="pb-8">
-        {renderCurrentStep()}
-      </main>
+    <Theme>
+      <div className="min-h-screen bg-gray-50">
+        <header className="bg-white shadow-sm">
+          <div className="max-w-6xl mx-auto px-6 py-4">
+            <h1 className="text-2xl font-serif text-center text-primary">
+              Wedding Invitation Builder
+            </h1>
+            <p className="text-center text-muted-foreground mt-1">
+              Create beautiful digital wedding invitations in minutes
+            </p>
+          </div>
+        </header>
+        <StepIndicator />
+        <main className="pb-8">
+          {renderCurrentStep()}
+        </main>
 
-      <footer className="bg-white border-t py-6">
-        <div className="max-w-6xl mx-auto px-6 text-center text-sm text-muted-foreground">
-          <p>© 2024 Wedding Invitation Builder. Create memories that last forever.</p>
-        </div>
-      </footer>
-    </div>
+        <footer className="bg-white border-t py-6">
+          <div className="max-w-6xl mx-auto px-6 text-center text-sm text-muted-foreground">
+            <p>© 2024 Wedding Invitation Builder. Create memories that last forever.</p>
+          </div>
+        </footer>
+      </div>
+    </Theme>
   );
 }
 
