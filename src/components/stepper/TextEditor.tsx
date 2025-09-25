@@ -124,7 +124,7 @@ export function TextEditor() {
                 <CardTitle>Personal Message</CardTitle>
               </CardHeader>
               <CardContent>
-                <textarea
+                <Textarea
                   value={invitationData.message}
                   onChange={(e) => updateInvitation({ message: e.target.value })}
                   placeholder="Write a personal message for your guests..."
@@ -166,7 +166,7 @@ export function TextEditor() {
               </Button>
               <Button
                 onClick={() => setCurrentStep(2)}
-                className="flex-1"
+                className="flex-1 text-white bg-primary"
               >
                 Next: Photos
               </Button>

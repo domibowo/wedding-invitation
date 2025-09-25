@@ -12,12 +12,12 @@ const baseButtonClasses = `
 `;
 
 const variantClasses: Record<string, string> = {
-  default: "bg-[hsl(var(--blue-9))] text-white hover:bg-[hsl(var(--blue-10))]",
+  default: "bg-[hsl(var(--blue-9))] hover:bg-[hsl(var(--blue-10))]",
   destructive:
-    "bg-[hsl(var(--red-9))] text-white hover:bg-[hsl(var(--red-10))] " +
+    "bg-[hsl(var(--red-9))] hover:bg-[hsl(var(--red-10))] " +
     "focus-visible:ring-[hsl(var(--red-7))]",
   outline:
-    "border border-[hsl(var(--gray-7))] bg-transparent text-[hsl(var(--gray-12))] " +
+    "border border-[hsl(var(--gray-7))] bg-white text-[hsl(var(--gray-12))] " +
     "hover:bg-[hsl(var(--gray-3))]",
   secondary:
     "bg-[hsl(var(--gray-4))] text-[hsl(var(--gray-12))] hover:bg-[hsl(var(--gray-5))]",

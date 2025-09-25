@@ -4,6 +4,8 @@ import { StepIndicator } from './components/StepIndicator';
 import { TemplateGallery } from './components/stepper/TemplateGallery';
 import { TextEditor } from './components/stepper/TextEditor';
 import { InvitationProvider, useInvitation } from './contexts/InvitationContext';
+import { PhotoEditor } from './components/stepper/PhotoEditor';
+import { ExtrasEditor } from './components/stepper/ExtrasEditor';
 
 function AppContent() {
     const { currentStep } = useInvitation();
@@ -14,10 +16,10 @@ function AppContent() {
         return <TemplateGallery />;
       case 1:
         return <TextEditor />;
-      // case 2:
-      //   return <PhotoEditor />;
-      // case 3:
-      //   return <ExtrasEditor />;
+      case 2:
+        return <PhotoEditor />;
+      case 3:
+        return <ExtrasEditor />;
       // case 4:
       //   return <InvitationPreview />;
       default:
