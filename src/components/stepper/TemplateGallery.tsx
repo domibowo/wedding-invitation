@@ -105,7 +105,7 @@ export function TemplateGallery() {
                       onClick={() => handleSelectTemplate(template)}
                       className="bg-white text-black hover:bg-gray-100 p-2 rounded-md"
                     >
-                      <span className='font-semibold'>Select Template</span>
+                      Select Template
                     </Button>
                   </div>
                 </div>
